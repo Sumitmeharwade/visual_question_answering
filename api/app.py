@@ -3,7 +3,7 @@ from fastapi.responses import JSONResponse
 from transformers import ViltProcessor, ViltForQuestionAnswering
 from PIL import Image
 import io
-import matplotlib.pyplot as plt
+# import matplotlib.pyplot as plt
 import time
 from fastapi.middleware.cors import CORSMiddleware
 
