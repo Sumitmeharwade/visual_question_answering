@@ -5,7 +5,7 @@ const Footer = () => {
     <footer>
       <div className="footer-content">
       <p>KLE Technological University</p>
-          <a href="https://github.com/Vlad-Fliahin/vqa-ua-front-end">
+          <a href="https://github.com/Sumitmeharwade/visual_question_answering">
             <i className="fab fa-github"></i>
           </a>
         </div>
