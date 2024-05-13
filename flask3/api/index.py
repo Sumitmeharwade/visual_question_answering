@@ -1,16 +1,18 @@
 from flask import Flask, request, jsonify
 from flask_cors import CORS
-from transformers import ViltProcessor, ViltForQuestionAnswering
+# from transformers import ViltProcessor, ViltForQuestionAnswering
 from PIL import Image
 import io
 import time
+from gradio_client import Client, file
 
 app = Flask(__name__)
 CORS(app)
 
-# Load the VILT model and processor
-processor = ViltProcessor.from_pretrained("dandelin/vilt-b32-finetuned-vqa")
-model = ViltForQuestionAnswering.from_pretrained("dandelin/vilt-b32-finetuned-vqa")
+
+
+client = Client("sumitmeharwade/dandelin-vilt-b32-finetuned-vqa")
+
 
 @app.route("/predict", methods=["POST"])
 def predict():
@@ -22,20 +24,26 @@ def predict():
 
     contents = image.read()
     image_data = io.BytesIO(contents)
-    image = Image.open(image_data)
+    # Open the image using PIL
+    image_pil = Image.open(image_data)
 
-    # Prepare inputs
-    encoding = processor(image, question, return_tensors="pt")
+    # Save the image to a file
+    image_pil.save("saved_image.png") 
+    print("IMAGE SAVED")
 
-    # Forward pass
-    outputs = model(**encoding)
-    logits = outputs.logits
-    idx = logits.argmax(-1).item()
-    predicted_answer = model.config.id2label[idx]
-    print("TIME =", (time.time() - start))
-    print("Predicted answer:", predicted_answer)
-    
-    return jsonify({"prediction": predicted_answer})
+    # Pass the image data to param_0
+    result = client.predict(
+        param_0=file("saved_image.png"),
+        param_1=question,
+        api_name="/predict"
+    )
+    print(result)
+    predicted_answer = result['label']
+    print("PREDICTED ANSWER = ", predicted_answer)
+    print("TIME = ", (time.time() - start))
+    return {
+        "prediction": predicted_answer
+    }
 
 if __name__ == "__main__":
     app.run(host="localhost", port=8000)
