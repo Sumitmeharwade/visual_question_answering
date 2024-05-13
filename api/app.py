@@ -24,7 +24,7 @@ client = Client("sumitmeharwade/dandelin-vilt-b32-finetuned-vqa")
 @app.post("/predict")
 async def predict(image: UploadFile = File(...), question: str = Form(...)):
     start = time.time()
-    print("QUESTION = ", question)
+    print("QUESTION =", question)
     # Read image data from the upload
     contents = await image.read()
     # Create a BytesIO object to hold the image data
