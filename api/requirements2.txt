@@ -1,6 +1,6 @@
 fastapi==0.70.0
 uvicorn==0.15.0
-gradio_client==0.16.2
+transformers==4.40.1
 pillow==10.3.0
 python-multipart==0.0.9
-
+torch==2.2.2
