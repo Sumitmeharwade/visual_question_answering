@@ -1,17 +1,11 @@
 from fastapi import FastAPI, File, UploadFile, Form
-from fastapi.responses import JSONResponse
-from transformers import ViltProcessor, ViltForQuestionAnswering
 from PIL import Image
 import io
-# import matplotlib.pyplot as plt
 import time
 from fastapi.middleware.cors import CORSMiddleware
+from gradio_client import Client, file
 
 app = FastAPI()
-
-# Load the VILT model and processor
-processor = ViltProcessor.from_pretrained("dandelin/vilt-b32-finetuned-vqa")
-model = ViltForQuestionAnswering.from_pretrained("dandelin/vilt-b32-finetuned-vqa")
 
 origins = [
     "*",
@@ -25,34 +19,33 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
+client = Client("sumitmeharwade/dandelin-vilt-b32-finetuned-vqa")
+
 @app.post("/predict")
 async def predict(image: UploadFile = File(...), question: str = Form(...)):
     start = time.time()
+    print("QUESTION = ", question)
     # Read image data from the upload
-    print("image = ")
     contents = await image.read()
+    # Create a BytesIO object to hold the image data
     image_data = io.BytesIO(contents)
-    image = Image.open(image_data)
-    # plt.imshow(image)
-    # plt.axis('off')  # Turn off axis
-    # plt.show()
 
-    print("Question: ",question)
+    # Open the image using PIL
+    image_pil = Image.open(image_data)
 
-
-
-    # Prepare inputs
-    encoding = processor(image, question, return_tensors="pt")
-
-    # Forward pass
-    
-    outputs = model(**encoding)
-    logits = outputs.logits
-    idx = logits.argmax(-1).item()
-    predicted_answer = model.config.id2label[idx]
-    print("TIME = ",(time.time() - start))
-    print("Predicted answer:", predicted_answer)
-    # return JSONResponse(content={"prediction": predicted_answer})
+    # Save the image to a file
+    image_pil.save("saved_image.png") 
+    print("IMAGE SAVED")
+    # Pass the image data to param_0
+    result = client.predict(
+        param_0=file("saved_image.png"),
+        param_1=question,
+        api_name="/predict"
+    )
+    print(result)
+    predicted_answer = result['label']
+    print("PREDICTED ANSWER = ", predicted_answer)
+    print("TIME = ", (time.time() - start))
     return {
         "prediction": predicted_answer
     }
