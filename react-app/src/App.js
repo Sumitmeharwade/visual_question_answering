@@ -37,7 +37,7 @@ const App = () => {
   // predict request handler
   async function handlePredict() {
     // API endpoint for prediction
-    const API_ENDPOINT = `https://visual-question-answering-vqa-api.vercel.app/predict`;
+    const API_ENDPOINT = `https://visual-question-answering-api.onrender.com/predict`;
 
     // clear prediction
     setPrediction('...')
