@@ -104,3 +104,50 @@ body {
     margin-top: 0;
     margin-bottom: 0;
 }
+
+@media screen and (max-width: 600px) {
+    .image-placeholder {
+        width: 300px;
+        height: 300px;
+    }
+
+    .footer-content a i {
+        font-size: 20px;
+    }
+
+    .question-input {
+        min-width: 300px;
+    }
+
+    .response-output {
+        min-width: 300px;
+    }
+
+    .predict-button {
+        width: 200px;
+    }
+    
+}
+@media screen and (max-width: 400px) {
+    .image-placeholder {
+        width: 200px;
+        height: 200px;
+    }
+
+    .footer-content a i {
+        font-size: 16px;
+    }
+
+    .question-input {
+        min-width: 200px;
+    }
+
+    .response-output {
+        min-width: 200px;
+    }
+
+    .predict-button {
+        width: 150px;
+    }
+}
+ 
