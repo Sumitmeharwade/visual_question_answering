@@ -2,6 +2,9 @@ import React, { useState, useRef } from "react";
 // import Header from "./Header";
 import "./Styles/home.css";
 import placeholderImage from "./images/image.png";
+import { NavLink } from "react-router-dom";
+import "./Styles/Navbar.css";
+import { CodeIcon, HamburgetMenuClose, HamburgetMenuOpen } from "./icons";
 
 const Home = () => {
   const [imageSelected, setImageSelected] = useState(false);
@@ -93,6 +96,13 @@ const Home = () => {
 
   return (
     <div className="home">
+      <NavLink exact to="/" className="title" >
+            <span>visual_question_answering</span>
+            <span className="icon" >
+              <CodeIcon />
+            </span>
+          </NavLink>
+          
       <div className="content">
         <div className="center">
           <div className="image-placeholder">

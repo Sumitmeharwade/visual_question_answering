@@ -30,13 +30,13 @@ const ContactUs = () => {
           >
             <img src={github} alt="GitHub" />
           </a>
-          <a
+          {/* <a
             href="https://wa.me/1234567890"
             target="_blank"
             rel="noopener noreferrer"
           >
             <img src={whatsapp} alt="WhatsApp" />
-          </a>
+          </a> */}
           <a
             href="https://www.instagram.com/shreyasairani"
             target="_blank"
@@ -64,13 +64,13 @@ const ContactUs = () => {
           >
             <img src={github} alt="GitHub" />
           </a>
-          <a
+          {/* <a
             href="https://wa.me/0987654321"
             target="_blank"
             rel="noopener noreferrer"
           >
             <img src={whatsapp} alt="WhatsApp" />
-          </a>
+          </a> */}
           <a
             href="https://www.instagram.com/sumitmeharwade"
             target="_blank"
@@ -98,13 +98,13 @@ const ContactUs = () => {
           >
             <img src={github} alt="GitHub" />
           </a>
-          <a
+          {/* <a
             href="https://wa.me/1122334455"
             target="_blank"
             rel="noopener noreferrer"
           >
             <img src={whatsapp} alt="WhatsApp" />
-          </a>
+          </a> */}
           <a
             href="https://www.instagram.com/rohitbiradarpatil"
             target="_blank"
@@ -132,13 +132,13 @@ const ContactUs = () => {
           >
             <img src={github} alt="GitHub" />
           </a>
-          <a
+          {/* <a
             href="https://wa.me/6677889900"
             target="_blank"
             rel="noopener noreferrer"
           >
             <img src={whatsapp} alt="WhatsApp" />
-          </a>
+          </a> */}
           <a
             href="https://www.instagram.com/tarunmaidur"
             target="_blank"

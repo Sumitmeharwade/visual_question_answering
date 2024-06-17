@@ -39,3 +39,8 @@ body {
   gap: 2px;
 }
 
+@media(min-height:900px){
+  .body{
+    height: 100vh;
+  }
+}
