@@ -1,0 +1,155 @@
+.home {
+  display: flex;
+  flex-direction: column;
+  min-height: 80vh;
+}
+
+.content {
+  flex: 1;
+  display: flex;
+  align-items: flex-start;
+  margin-top: 5%;
+}
+
+.center {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  background-color: #fff;
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.367);
+  border-radius: 8px;
+  width: 90%; /* Adjusted width for better responsiveness */
+  max-width: 750px;
+  margin: 0 auto; /* Center the element */
+  border: 2px solid rgba(14, 13, 13, 0.29);
+}
+
+.image-placeholder {
+  position: relative;
+  max-width: 100%; /* Adjusted to take full width */
+  margin-right: 20px; /* Reduced margin for better fit */
+}
+
+.static-image {
+  max-width: 100%; /* Ensure images are responsive */
+  height: auto; /* Maintain aspect ratio */
+  border-radius: 10px;
+  transition: transform 0.3s ease;
+}
+
+.static-image:hover {
+  transform: scale(1.05);
+  border-color: #aaa;
+  border: none;
+}
+
+#chat {
+  display: flex;
+  flex-direction: column;
+  width: 100%; /* Adjusted width for better responsiveness */
+}
+
+#upper {
+  border: 3px solid #3230306a;
+  border-radius: 15px;
+  background-color: #f9f9f9;
+  max-width: 100%; /* Adjusted max-width for smaller screens */
+  margin: 20px auto; /* Center align on smaller screens */
+  padding: 24%; /* Adjusted padding for smaller screens */
+  box-sizing: border-box; /* Ensures padding is included in width */
+  padding-right: 70%;
+}
+
+.message {
+  margin: 10px 0;
+  border-radius: 8px;
+  transition: background-color 0.3s ease;
+}
+
+.message.user {
+  background-color: #d1e7dd;
+  align-self: flex-end;
+}
+
+.message.model {
+  background-color: #f8d7da;
+  align-self: flex-start;
+}
+
+#lower {
+  display: flex;
+  margin-top: 10px;
+  justify-content: center; /* Center buttons horizontally */
+  width: 100%; /* Take full width of parent container */
+}
+
+#lower input {
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 10px 10px 10px 10px;
+  border-right: none;
+  width: 78%; /* Adjusted width for better fit */
+  background-color: rgb(236, 236, 237);
+}
+
+.predict-button {
+  padding: 10px 20px;
+  border: none;
+  background-color: #007bff;
+  color: #fff;
+  border-radius: 0 10px 10px 0; /* Adjusted border radius */
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  border-radius: 10px 10px 10px 10px;
+}
+
+.predict-button:hover {
+  background-color: #0056b3;
+}
+
+/* Media Queries for Responsiveness */
+
+@media (max-width: 412px) {
+  .center {
+    flex-direction: column; /* Stack elements vertically on smaller screens */
+    align-items: center; /* Center align items horizontally */
+    margin: 0 5%; /* Adjusted margin for smaller screens */
+    width: 100%; /* Ensure full width on small screens */
+    box-sizing: border-box; /* Ensures padding/margin is included in width */
+  }
+
+  .image-placeholder {
+    margin-right: 0; /* Remove margin for smaller screens */
+    margin-bottom: 20px; /* Add margin bottom for spacing */
+    max-width: 100%; /* Ensure full width on small screens */
+  }
+
+  .static-image {
+    max-width: 100%; /* Ensure full width on small screens */
+  }
+
+  #chat {
+    width: 100%; /* Ensure full width on small screens */
+  }
+
+  #upper {
+    max-width: 100%; /* Ensure chat box takes full width on smaller screens */
+    padding: 30%; /* Adjust padding for smaller screens */
+    box-sizing: border-box; /* Ensures padding is included in width */
+    padding-right: 67%;
+  }
+
+  #lower input {
+    width: 60%; /* Adjust width to fit with button */
+    max-width: none; /* Remove max-width */
+    padding: 3%;
+    padding-right: 72%;
+    border-radius: 15px;
+  }
+
+  .predict-button {
+    width: 40%; /* Adjust width to fit with input */
+    border-radius: 10px 10px 10px 10px; /* Adjusted border radius */
+  }
+}
