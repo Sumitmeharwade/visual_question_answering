@@ -1,0 +1,115 @@
+#e-about {
+    background-color: #f5f5f5;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.33);
+    max-width: 90%; /* Adjusted width for smaller screens */
+    margin: 20px auto; /* Center align and provide spacing */
+  }
+  
+  #ab-part1 {
+    position: relative;
+    margin-bottom: 20px;
+  }
+  
+  #ab-part1 img {
+    width: 100%;
+    border-radius: 8px;
+  }
+  
+  #text-overlay {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    background-color: rgba(0, 0, 0, 0.7);
+    color: #fff;
+    padding: 10px;
+    border-radius: 8px;
+  }
+  
+  #ab-part2 {
+    margin-bottom: 20px;
+  }
+  
+  #ab-part2 p,
+  #ab-part2 ul {
+    margin-bottom: 15px;
+    line-height: 1.6;
+  }
+  
+  #ab-part2 ul {
+    padding-left: 20px;
+  }
+  
+  #ab-part2 img {
+    width: 100%;
+    border-radius: 8px;
+    margin-bottom: 15px;
+  }
+  
+  #part6,
+  #part7,
+  #part8 {
+    margin-bottom: 20px;
+  }
+  
+  #part6 h1,
+  #part7 h1,
+  #part8 h1 {
+    font-size: 24px;
+    margin-bottom: 10px;
+  }
+  
+  #part7 div {
+    margin-left: 20px;
+  }
+  
+  #part8 h2 {
+    font-weight: 500;
+    margin-bottom: 10px;
+  }
+  
+  #part8 div {
+    margin-left: 20px;
+  }
+  
+  .p1{
+    font-size: 35px;
+    font-weight: 600;
+  }
+  .p2{
+    font-size: 26px;
+  }
+
+  @media (max-width: 480px) {
+    .p1 {
+      font-size: 26px; /* Further adjust font size for smaller screens */
+    }
+  
+    .p2 {
+      font-size: 16px; /* Further adjust font size for smaller screens */
+    }
+  }
+  
+  @media (max-width: 412px) {
+    #e-about {
+      padding: 15px;
+    }
+  
+    #text-overlay {
+      width: 70%; /* Adjusted width for smaller screens */
+      top: 10px;
+      left: 10px;
+      font-size: 14px; /* Decrease font size for overlay text */
+      padding: 8px; /* Decrease padding for overlay text */
+    }
+  
+    .p1 {
+      font-size: 24px; /* Adjust font size for smaller screens */
+    }
+  
+    .p2 {
+      font-size: 14px; /* Adjust font size for smaller screens */
+    }
+  }
+  
