@@ -1,10 +1,10 @@
 apply plugin: 'com.android.application'
 
 android {
-    namespace "com.vqa.app"
+    namespace "com.eis.vqa"
     compileSdk rootProject.ext.compileSdkVersion
     defaultConfig {
-        applicationId "com.vqa.app"
+        applicationId "com.eis.vqa"
         minSdkVersion rootProject.ext.minSdkVersion
         targetSdkVersion rootProject.ext.targetSdkVersion
         versionCode 1

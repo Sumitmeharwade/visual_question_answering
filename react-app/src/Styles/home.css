@@ -113,7 +113,7 @@
     flex-direction: column;
     align-items: center;
     margin: 0 5%;
-    width: 100%;
+    width: 90%;
     box-sizing: border-box;
   }
 
@@ -152,10 +152,11 @@
     flex-direction: column;
     align-items: center;
     margin: 0 5%;
-    width: 100%;
+    width: 90%;
     box-sizing: border-box;
+    margin-bottom: 35px;
   }
-
+  
   .image-placeholder {
     margin-right: 0;
     margin-bottom: 20px;
@@ -169,18 +170,26 @@
   #chat {
     width: 100%;
   }
-
+  .message {
+    max-width: 90%;
+    align-self: center;
+    margin-left: 10px;
+    font-size: 1.5rem;
+  }
   #upper {
     max-width: 100%;
+    align-self: center;
   }
 
   #lower input {
-    width: 60%;
+    width: 80%;
     border-radius: 15px;
+    font-size: 1.5rem;
   }
 
   .predict-button {
-    width: 40%;
+    margin-left: 10px;
+    width: 25%;
     border-radius: 15px;
   }
 

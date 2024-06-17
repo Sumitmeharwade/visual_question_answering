@@ -1,8 +1,8 @@
 import type { CapacitorConfig } from '@capacitor/cli';
 
 const config: CapacitorConfig = {
-  appId: 'com.vqa.app',
-  appName: 'vqa-app',
+  appId: 'com.eis.vqa',
+  appName: 'VQA-app',
   webDir: 'build'
 };
 

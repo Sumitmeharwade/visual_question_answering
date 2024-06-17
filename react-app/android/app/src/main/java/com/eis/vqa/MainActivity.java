@@ -1,4 +1,4 @@
-package com.vqa.app;
+package com.eis.vqa;
 
 import com.getcapacitor.BridgeActivity;
 
