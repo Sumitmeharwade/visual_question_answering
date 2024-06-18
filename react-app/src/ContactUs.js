@@ -8,6 +8,7 @@ import github from "./images/github.png";
 import rohit from './images/Rohit Photo.jpg'
 import shreyas from './images/Photo.jpg'
 import sumit from './images/sumit photo.jpg'
+import tarun from './images/tarun.jpg'
 
 const ContactUs = () => {
   return (
@@ -115,7 +116,7 @@ const ContactUs = () => {
         </div>
       </div>
       <div className="card1">
-        <img src={ai} alt="Tarun Maidur" />
+        <img src={tarun} alt="Tarun Maidur" />
         <p>Tarun Maidur</p>
         <div className="social-icons">
           <a
