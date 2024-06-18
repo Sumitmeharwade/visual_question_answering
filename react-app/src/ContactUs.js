@@ -17,14 +17,14 @@ const ContactUs = () => {
         <p>Shreyas Airani</p>
         <div className="social-icons-contact1">
           <a
-            href="https://www.linkedin.com/in/shreyas-airani"
+            href="http://www.linkedin.com/in/shreyas-airani"
             target="_blank"
             rel="noopener noreferrer"
           >
             <img src={linkedin} alt="LinkedIn" />
           </a>
           <a
-            href="https://github.com/shreyasairani"
+            href="https://github.com/Shreyas683"
             target="_blank"
             rel="noopener noreferrer"
           >
@@ -38,7 +38,7 @@ const ContactUs = () => {
             <img src={whatsapp} alt="WhatsApp" />
           </a> */}
           <a
-            href="https://www.instagram.com/shreyasairani"
+            href="https://www.instagram.com/shreyas.airani"
             target="_blank"
             rel="noopener noreferrer"
           >
@@ -47,11 +47,11 @@ const ContactUs = () => {
         </div>
       </div>
       <div className="card1">
-        <img src={sumit} alt="Sumit Meharwade" />
+        <img src={sumit} alt="https://www.instagram.com/sumit_meharwade" />
         <p>Sumit Meharwade</p>
         <div className="social-icons">
           <a
-            href="https://www.linkedin.com/in/sumit-meharwade"
+            href="https://www.linkedin.com/in/sumitmeharwade"
             target="_blank"
             rel="noopener noreferrer"
           >
@@ -85,14 +85,14 @@ const ContactUs = () => {
         <p>Rohit Biradar Patil</p>
         <div className="social-icons">
           <a
-            href="https://www.linkedin.com/in/rohit-biradar-patil"
+            href="http://www.linkedin.com/in/rohit-biradarpatil-734248299"
             target="_blank"
             rel="noopener noreferrer"
           >
             <img src={linkedin} alt="LinkedIn" />
           </a>
           <a
-            href="https://github.com/rohitbiradarpatil"
+            href="https://github.com/rohitb-patil/rohitb-patil"
             target="_blank"
             rel="noopener noreferrer"
           >
@@ -106,7 +106,7 @@ const ContactUs = () => {
             <img src={whatsapp} alt="WhatsApp" />
           </a> */}
           <a
-            href="https://www.instagram.com/rohitbiradarpatil"
+            href="https://www.instagram.com/rohit__bpatil"
             target="_blank"
             rel="noopener noreferrer"
           >
@@ -119,14 +119,14 @@ const ContactUs = () => {
         <p>Tarun Maidur</p>
         <div className="social-icons">
           <a
-            href="https://www.linkedin.com/in/tarun-maidur"
+            href="https://www.linkedin.com/in/tarunmaidur"
             target="_blank"
             rel="noopener noreferrer"
           >
             <img src={linkedin} alt="LinkedIn" />
           </a>
           <a
-            href="https://github.com/tarunmaidur"
+            href="https://github.com/rock-02"
             target="_blank"
             rel="noopener noreferrer"
           >
@@ -139,13 +139,13 @@ const ContactUs = () => {
           >
             <img src={whatsapp} alt="WhatsApp" />
           </a> */}
-          <a
+          {/* <a
             href="https://www.instagram.com/tarunmaidur"
             target="_blank"
             rel="noopener noreferrer"
           >
             <img src={instagram} alt="Instagram" />
-          </a>
+          </a> */}
         </div>
       </div>
     </div>

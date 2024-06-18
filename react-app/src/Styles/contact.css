@@ -134,3 +134,8 @@
   .us{
     height: 100vh;
   }
+  @media(max-width: 740px){
+    .us{
+      height: 100%;
+    }
+  }
