@@ -2,6 +2,7 @@
 # Visual Question Answering (VQA)
 
 This repository implements a Visual Question Answering (VQA) system using a deep learning model to answer questions based on images. The system includes both web and mobile interfaces, with a choice of FastAPI or Flask backends.
+NOTE : The model is running in huggingface, you can add the dandelin/vilt-b32-finetuned-vqa to your huggingface space and update in the server.
 
 ## Project Structure
 
@@ -62,8 +63,5 @@ Open `android/` in Android Studio and deploy the app to a device or emulator.
 ## Notes
 
 - **Configuration**: Adjust API endpoints in React and Android app configs if needed.
-- **Model**: Both FastAPI and Flask load the VQA model for inference.
 
 ---
-
-This project provides a flexible, multi-platform solution for Visual Question Answering with configurable backend support.
