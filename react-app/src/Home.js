@@ -7,6 +7,7 @@ import "./Styles/Navbar.css";
 import { CodeIcon, HamburgetMenuClose, HamburgetMenuOpen } from "./icons";
 
 const Home = () => {
+  const [showPopup, setShowPopup] = useState(true);
   const [imageSelected, setImageSelected] = useState(false);
   const [uploadedImage, setUploadedImage] = useState(null);
   const [question, setQuestion] = useState("");
@@ -94,15 +95,34 @@ const Home = () => {
     setQuestion("");
   }
 
+  const handlePopupClose = () => setShowPopup(false);
+
   return (
     <div className="home">
-      <NavLink exact to="/" className="title" >
-            <span>visual_question_answering</span>
-            <span className="icon" >
-              <CodeIcon />
-            </span>
-          </NavLink>
-          
+      <NavLink exact to="/" className="title">
+        <span>visual_question_answering</span>
+        <span className="icon">
+          <CodeIcon />
+        </span>
+      </NavLink>
+
+      {showPopup && (
+        <>
+          <div className="popup-overlay" onClick={handlePopupClose}></div>
+          <div className="popup">
+            <p>
+              Heads up! This server's on a free instance, so it might take a
+              short nap after a while. If this is your first visit, please allow
+              up to 50 seconds for it to wake up and greet you. Thanks for your
+              patience!
+            </p>
+            <button className="popup-close" onClick={handlePopupClose}>
+              X
+            </button>
+          </div>
+        </>
+      )}
+
       <div className="content">
         <div className="center">
           <div className="image-placeholder">
@@ -149,7 +169,7 @@ const Home = () => {
             </div>
             <div id="lower">
               <input
-              className="askME"
+                className="askME"
                 placeholder="Ask me"
                 value={question}
                 onChange={(e) => setQuestion(e.target.value)}
@@ -161,7 +181,6 @@ const Home = () => {
           </div>
         </div>
       </div>
-      
     </div>
   );
 };
